@@ -1,0 +1,23 @@
+<div id="movie-container">
+  <img src="{{this.image}}" alt="Movie Cover" />
+
+  <div id="movie-info">
+    <div class="d-grid gap-2 d-md-block">
+      <a class="btn btn-primary" href="/movies">Go back</a>
+    </div>
+    <h2>{{this.title}}</h2>
+    <strong>Director: {{this.director}}</strong>
+    <strong>Stars</strong>
+    <ul>
+      {{#each this.stars}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <p>{{this.description}}</p>
+    <ul>
+      {{#each this.showtimes}}
+        <li>{{this}} | </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
